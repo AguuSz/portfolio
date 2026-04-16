@@ -1,8 +1,6 @@
-import { Analytics } from '@vercel/analytics/next';
 import Footer from '@/components/main/Footer'
 import { Navbar } from '@/components/main/Navbar'
 import { ThemeProvider } from '@/components/theme-provider'
-import { AnalyticsProvider } from '@/components/analytics/AnalyticsProvider'
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
@@ -18,6 +16,7 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://asepulveda.dev'),
   title: 'Agustín Sepúlveda - DevOps & Infrastructure Engineer | Kubernetes, AWS, GCP',
   description:
     'DevOps & Infrastructure Engineer specializing in Kubernetes, AWS, GCP, Terraform, and CI/CD. Portfolio showcasing cloud infrastructure, automation, and homelab projects.',
@@ -140,15 +139,12 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <AnalyticsProvider>
-            <Navbar />
-            <main role="main">
-              {children}
-            </main>
-            <Footer />
-          </AnalyticsProvider>
+          <Navbar />
+          <main role="main">
+            {children}
+          </main>
+          <Footer />
         </ThemeProvider>
-        <Analytics />
       </body>
     </html>
   )

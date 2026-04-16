@@ -1,14 +1,11 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { FaGithub, FaLinkedin, FaRocket } from "react-icons/fa";
 import { FC, useState, useEffect } from "react";
 import { NavbarButton } from "../ui/resizable-navbar";
-import { TrackableContact } from "@/components/analytics/TrackableElement";
-import { useAnalyticsContext } from "@/components/analytics/AnalyticsProvider";
 
 const HeroContent: FC = () => {
 	const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-	const { trackClick } = useAnalyticsContext();
 
 	useEffect(() => {
 		const handleMouseMove = (e: MouseEvent) => {
@@ -39,10 +36,7 @@ const HeroContent: FC = () => {
 		requestAnimationFrame(scroll);
 	}
 
-	const handleConnectClick = (e: React.MouseEvent<HTMLElement>) => {
-		// Track the click
-		// trackClick(e, 'hero-connect-button', 'Let\'s Connect')
-
+	const handleConnectClick = () => {
 		const contactSection = document.getElementById("contact");
 		if (contactSection) {
 			smoothScrollTo(contactSection, 1500);
@@ -144,28 +138,24 @@ const HeroContent: FC = () => {
 				</NavbarButton>
 
 				<div className="flex items-center gap-3">
-					<TrackableContact method="github">
-						<NavbarButton
-							title="Visit GitHub profile"
-							variant="secondary"
-							className="group bg-card/60 backdrop-blur-sm border-primary/30 hover:border-primary/60 hover:bg-primary/10 px-6 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg"
-							href="https://github.com/AguuSz">
-							<FaGithub className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
-						</NavbarButton>
-					</TrackableContact>
+					<NavbarButton
+						title="Visit GitHub profile"
+						variant="secondary"
+						className="group bg-card/60 backdrop-blur-sm border-primary/30 hover:border-primary/60 hover:bg-primary/10 px-6 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg"
+						href="https://github.com/AguuSz">
+						<FaGithub className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
+					</NavbarButton>
 
-					<TrackableContact method="linkedin" title="Visit LinkedIn profile">
-						<NavbarButton
+					<NavbarButton
+						title="Visit LinkedIn profile"
+						variant="secondary"
+						className="group bg-card/60 backdrop-blur-sm border-accent-2/30 hover:border-accent-2/60 hover:bg-accent-2/10 px-6 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg"
+						href="https://www.linkedin.com/in/agustin-sepulveda">
+						<FaLinkedin
 							title="Visit LinkedIn profile"
-							variant="secondary"
-							className="group bg-card/60 backdrop-blur-sm border-accent-2/30 hover:border-accent-2/60 hover:bg-accent-2/10 px-6 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg"
-							href="https://www.linkedin.com/in/agustin-sepulveda">
-							<FaLinkedin
-								title="Visit LinkedIn profile"
-								className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300"
-							/>
-						</NavbarButton>
-					</TrackableContact>
+							className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300"
+						/>
+					</NavbarButton>
 				</div>
 			</motion.div>
 

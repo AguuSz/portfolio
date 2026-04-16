@@ -1,19 +1,6 @@
-// Cloudflare dev platform setup - only enable when explicitly needed
-// via CLOUDFLARE_DEV=1, as it injects --localstorage-file which breaks
-// next-themes SSR on Node.js v25+
-if (process.env.CLOUDFLARE_DEV) {
-  import('@cloudflare/next-on-pages/next-dev')
-    .then(({ setupDevPlatform }) => setupDevPlatform())
-    .catch(console.error)
-}
-
 import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
-  webpack: (config) => {
-    return config
-  },
-  turbopack: {},
   images: {
     remotePatterns: [
       {
@@ -38,53 +25,27 @@ const nextConfig: NextConfig = {
       {
         source: '/(.*)',
         headers: [
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
-          {
-            key: 'X-Frame-Options',
-            value: 'DENY',
-          },
-          {
-            key: 'X-XSS-Protection',
-            value: '1; mode=block',
-          },
-          {
-            key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin',
-          },
+          { key: 'X-Content-Type-Options', value: 'nosniff' },
+          { key: 'X-Frame-Options', value: 'DENY' },
+          { key: 'X-XSS-Protection', value: '1; mode=block' },
+          { key: 'Referrer-Policy', value: 'origin-when-cross-origin' },
         ],
       },
       {
         source: '/sitemap.xml',
         headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=86400, s-maxage=86400',
-          },
+          { key: 'Cache-Control', value: 'public, max-age=86400, s-maxage=86400' },
         ],
       },
       {
         source: '/robots.txt',
         headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=86400, s-maxage=86400',
-          },
+          { key: 'Cache-Control', value: 'public, max-age=86400, s-maxage=86400' },
         ],
       },
     ]
   },
-  eslint: {
-    // ⚠️ This makes build succeed even if lint errors exist
-    ignoreDuringBuilds: true,
-  },
-   typescript: {
-    // !! WARN !!
-    // Dangerously allow production builds to successfully complete even if
-    // your project has type errors.
-    // !! WARN !!
+  typescript: {
     ignoreBuildErrors: true,
   },
 }

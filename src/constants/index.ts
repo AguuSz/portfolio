@@ -1,6 +1,5 @@
 import type { IconType } from 'react-icons'
 import {
-  SiAmazon,
   SiAnsible,
   SiCaddy,
   SiCloudflare,
@@ -43,7 +42,7 @@ export const skills: Skill[] = [
   { skill_name: 'Helm', icon: SiHelm, color: '#0F1689' },
 
   // Cloud
-  { skill_name: 'AWS', icon: SiAmazon, color: '#FF9900' },
+  { skill_name: 'AWS', image: '/aws.png' },
   { skill_name: 'GCP', icon: SiGooglecloud, color: '#4285F4' },
 
   // IaC & Automatización

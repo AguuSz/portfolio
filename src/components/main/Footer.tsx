@@ -1,11 +1,9 @@
 'use client'
 
-import { motion } from 'framer-motion'
-import Link from 'next/link'
-import { FC, useEffect, useState } from 'react'
-import { FaLinkedin, FaTwitter } from 'react-icons/fa'
+import { motion } from 'motion/react'
+import { FC } from 'react'
+import { FaLinkedin } from 'react-icons/fa'
 import { RxGithubLogo } from 'react-icons/rx'
-import { TrackableElement, TrackableContact } from '@/components/analytics/TrackableElement'
 
 const Footer: FC = () => {
   const socialLinks = [
@@ -77,15 +75,13 @@ const Footer: FC = () => {
             <ul className="space-y-2 text-sm">
               {quickLinks.map((item) => (
                 <li key={item.name}>
-                  <TrackableElement elementId={`footer-nav-${item.name.toLowerCase()}`} elementText={`Footer: ${item.name}`}>
-                    <a
-                      href={item.href}
-                      className="hover:text-primary transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary"
-                      aria-label={`Navigate to ${item.name} section`}
-                    >
-                      {item.name}
-                    </a>
-                  </TrackableElement>
+                  <a
+                    href={item.href}
+                    className="hover:text-primary transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary"
+                    aria-label={`Navigate to ${item.name} section`}
+                  >
+                    {item.name}
+                  </a>
                 </li>
               ))}
             </ul>
@@ -98,15 +94,13 @@ const Footer: FC = () => {
             <ul className="space-y-2 text-sm">
               {servicesLinks.map((item) => (
                 <li key={item.name}>
-                  <TrackableElement elementId={`footer-service-${item.name.toLowerCase().replace(/\s+/g, '-')}`} elementText={`Service: ${item.name}`}>
-                    <a
-                      href={item.href}
-                      className="hover:text-primary transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary"
-                      aria-label={`Learn about ${item.name}`}
-                    >
-                      {item.name}
-                    </a>
-                  </TrackableElement>
+                  <a
+                    href={item.href}
+                    className="hover:text-primary transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary"
+                    aria-label={`Learn about ${item.name}`}
+                  >
+                    {item.name}
+                  </a>
                 </li>
               ))}
             </ul>
@@ -118,18 +112,17 @@ const Footer: FC = () => {
             </h2>
             <div className="flex flex-wrap gap-3">
               {socialLinks.map((link) => (
-                <TrackableContact key={link.label} method={`footer-${link.label.toLowerCase()}`}>
-                  <motion.a
-                    href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center w-10 h-10 bg-muted rounded-full hover:bg-gradient-to-r hover:from-accent-2 hover:to-accent-3 hover:text-white transition-all duration-300"
-                    whileHover={{ scale: 1.2, rotate: 5 }}
-                    aria-label={`Visit my ${link.label} profile`}
-                  >
-                    {link.icon}
-                  </motion.a>
-                </TrackableContact>
+                <motion.a
+                  key={link.label}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center w-10 h-10 bg-muted rounded-full hover:bg-gradient-to-r hover:from-accent-2 hover:to-accent-3 hover:text-white transition-all duration-300"
+                  whileHover={{ scale: 1.2, rotate: 5 }}
+                  aria-label={`Visit my ${link.label} profile`}
+                >
+                  {link.icon}
+                </motion.a>
               ))}
             </div>
             <div className="mt-4">

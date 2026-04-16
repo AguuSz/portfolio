@@ -1,8 +1,7 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { motion } from 'motion/react'
 import { FaGithub } from 'react-icons/fa'
-import { Badge } from '../ui/badge'
 import { BentoGrid, BentoGridItem } from '../ui/bento-grid'
 
 const projectsData = [
@@ -57,24 +56,25 @@ const Projects = () => {
                   <p>{project.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {project.tags.map(tag => (
-                      <Badge key={tag} variant="outline" className="rounded-full">
+                      <span
+                        key={tag}
+                        className="inline-flex items-center rounded-full border border-border px-3 py-0.5 text-xs font-medium text-foreground"
+                      >
                         {tag}
-                      </Badge>
+                      </span>
                     ))}
                   </div>
                   <div className="flex flex-wrap gap-3">
-                    <Badge asChild variant="secondary" className="gap-1 rounded-full">
-                      <a
-                        title="View GitHub profile"
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-1"
-                      >
-                        <FaGithub className="size-3" />
-                        GitHub
-                      </a>
-                    </Badge>
+                    <a
+                      title="View GitHub profile"
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 rounded-full bg-secondary text-secondary-foreground px-3 py-0.5 text-xs font-medium hover:bg-secondary/80 transition-colors"
+                    >
+                      <FaGithub className="size-3" />
+                      GitHub
+                    </a>
                   </div>
                 </div>
               }

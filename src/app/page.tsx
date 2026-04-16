@@ -6,7 +6,6 @@ import Skills from "@/components/main/Skills";
 import Timeline from "@/components/main/Timeline";
 import { Toaster } from "react-hot-toast";
 import { Metadata } from "next";
-import InteractiveWrapper from "@/components/main/InteractiveWrapper";
 
 export const metadata: Metadata = {
 	title: "Agustín Sepúlveda - DevOps & Cloud Engineer | Kubernetes, AWS, GCP",
@@ -30,7 +29,7 @@ export default function Home() {
 				</p>
 			</div>
 
-			<InteractiveWrapper>
+			<div className="flex flex-col gap-10">
 				<Hero />
 				<Skills />
 				<Timeline />
@@ -38,7 +37,7 @@ export default function Home() {
 				<Projects />
 				<ContactUs />
 				<Toaster position="bottom-right" />
-			</InteractiveWrapper>
+			</div>
 		</div>
 	);
 }

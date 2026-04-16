@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { FC, JSX } from "react";
 import Image from "next/image";
 import { Timeline as TimelineComponent } from "@/components/ui/timeline";

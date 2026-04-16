@@ -1,6 +1,6 @@
 'use client'
 
-import { Variants, motion } from 'framer-motion'
+import { Variants, motion } from 'motion/react'
 import { MessageCircle } from 'lucide-react'
 import { FC, FormEvent, useState } from 'react'
 import toast from 'react-hot-toast'
