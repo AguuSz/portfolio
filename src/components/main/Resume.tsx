@@ -37,7 +37,7 @@ const ResumeSection = () => {
         viewport={{ once: true }}
         className="text-center mb-10 relative z-10"
       >
-        <h2 title="My Resume" className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-foreground via-primary to-blue-500 bg-clip-text text-transparent tracking-tight mb-4">
+        <h2 title="My Resume" className="text-4xl sm:text-5xl font-bold text-heading-gradient tracking-tight mb-4">
           My Resume
         </h2>
         <p className="text-lg text-muted-foreground">

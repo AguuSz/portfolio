@@ -38,11 +38,11 @@ export function ThemeToggle() {
           size="icon" 
           className="rounded-full modern-hover glass-effect border-border/50 hover:border-primary/50 relative overflow-hidden group"
         >
-          <Sun className="h-[1.2rem] w-[1.2rem] scale-100 rotate-0 transition-all duration-500 dark:scale-0 dark:-rotate-90 text-amber-500" />
-          <Moon className="absolute h-[1.2rem] w-[1.2rem] scale-0 rotate-90 transition-all duration-500 dark:scale-100 dark:rotate-0 text-blue-400" />
-          
+          <Sun className="h-[1.2rem] w-[1.2rem] scale-100 rotate-0 transition-all duration-500 dark:scale-0 dark:-rotate-90 text-warning" />
+          <Moon className="absolute h-[1.2rem] w-[1.2rem] scale-0 rotate-90 transition-all duration-500 dark:scale-100 dark:rotate-0 text-primary" />
+
           {/* Animated background */}
-          <div className="absolute inset-0 bg-gradient-to-r from-amber-500/10 to-orange-500/10 dark:from-blue-500/10 dark:to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          <div className="absolute inset-0 bg-gradient-to-r from-warning/10 to-warning/20 dark:from-primary/10 dark:to-accent-3/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           
           <span className="sr-only">Toggle theme</span>
         </Button>
@@ -52,21 +52,21 @@ export function ThemeToggle() {
         className="glass-effect border-border/50 shadow-xl"
         sideOffset={8}
       >
-        <DropdownMenuItem 
+        <DropdownMenuItem
           onClick={() => setTheme('light')}
-          className="cursor-pointer hover:bg-amber-500/10 focus:bg-amber-500/10"
+          className="cursor-pointer hover:bg-warning/10 focus:bg-warning/10"
         >
-          <Sun className="mr-2 h-4 w-4 text-amber-500" />
+          <Sun className="mr-2 h-4 w-4 text-warning" />
           <span>Light</span>
-          {theme === 'light' && <div className="ml-auto h-2 w-2 rounded-full bg-amber-500" />}
+          {theme === 'light' && <div className="ml-auto h-2 w-2 rounded-full bg-warning" />}
         </DropdownMenuItem>
-        <DropdownMenuItem 
+        <DropdownMenuItem
           onClick={() => setTheme('dark')}
-          className="cursor-pointer hover:bg-blue-500/10 focus:bg-blue-500/10"
+          className="cursor-pointer hover:bg-primary/10 focus:bg-primary/10"
         >
-          <Moon className="mr-2 h-4 w-4 text-blue-400" />
+          <Moon className="mr-2 h-4 w-4 text-primary" />
           <span>Dark</span>
-          {theme === 'dark' && <div className="ml-auto h-2 w-2 rounded-full bg-blue-400" />}
+          {theme === 'dark' && <div className="ml-auto h-2 w-2 rounded-full bg-primary" />}
         </DropdownMenuItem>
         <DropdownMenuItem 
           onClick={() => setTheme('system')}

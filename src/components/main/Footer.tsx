@@ -53,7 +53,7 @@ const Footer: FC = () => {
 
   return (
     <footer className="relative w-full px-6 py-12 mt-20 bg-background text-foreground border-t border-border transition-colors">
-      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-500" />
+      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-accent-3 via-accent-2 to-accent-4" />
       <div className="max-w-7xl mx-auto">
         <motion.div
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
@@ -122,7 +122,7 @@ const Footer: FC = () => {
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center w-10 h-10 bg-muted rounded-full hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-500 hover:text-white transition-all duration-300"
+                    className="flex items-center justify-center w-10 h-10 bg-muted rounded-full hover:bg-gradient-to-r hover:from-accent-2 hover:to-accent-3 hover:text-white transition-all duration-300"
                     whileHover={{ scale: 1.2, rotate: 5 }}
                     aria-label={`Visit my ${link.label} profile`}
                   >

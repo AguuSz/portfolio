@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
+import { BRAND_COLORS } from '@/constants/brandColors'
 
 export const metadata: Metadata = {
   title: 'Cloud & Infrastructure Engineer - Agustín Sepúlveda | AWS, GCP',
@@ -64,8 +65,11 @@ export default function CloudEngineerPage() {
             <h2 className="text-3xl font-semibold mb-6 text-foreground">Cloud Platform Expertise</h2>
             <div className="grid md:grid-cols-3 gap-6">
               <div className="text-center">
-                <div className="bg-orange-100 dark:bg-orange-900/20 p-4 rounded-lg mb-4">
-                  <h3 className="text-lg font-semibold text-orange-600 dark:text-orange-400">Amazon Web Services</h3>
+                <div
+                  className="p-4 rounded-lg mb-4"
+                  style={{ backgroundColor: `${BRAND_COLORS.aws}1a` }}
+                >
+                  <h3 className="text-lg font-semibold" style={{ color: BRAND_COLORS.aws }}>Amazon Web Services</h3>
                 </div>
                 <ul className="text-sm text-muted-foreground space-y-1">
                   <li>EC2, ECS, EKS, Lambda</li>
@@ -75,8 +79,11 @@ export default function CloudEngineerPage() {
                 </ul>
               </div>
               <div className="text-center">
-                <div className="bg-blue-100 dark:bg-blue-900/20 p-4 rounded-lg mb-4">
-                  <h3 className="text-lg font-semibold text-blue-600 dark:text-blue-400">Microsoft Azure</h3>
+                <div
+                  className="p-4 rounded-lg mb-4"
+                  style={{ backgroundColor: `${BRAND_COLORS.azure}1a` }}
+                >
+                  <h3 className="text-lg font-semibold" style={{ color: BRAND_COLORS.azure }}>Microsoft Azure</h3>
                 </div>
                 <ul className="text-sm text-muted-foreground space-y-1">
                   <li>Virtual Machines, AKS</li>
@@ -86,8 +93,11 @@ export default function CloudEngineerPage() {
                 </ul>
               </div>
               <div className="text-center">
-                <div className="bg-green-100 dark:bg-green-900/20 p-4 rounded-lg mb-4">
-                  <h3 className="text-lg font-semibold text-green-600 dark:text-green-400">Google Cloud Platform</h3>
+                <div
+                  className="p-4 rounded-lg mb-4"
+                  style={{ backgroundColor: `${BRAND_COLORS.gcp}1a` }}
+                >
+                  <h3 className="text-lg font-semibold" style={{ color: BRAND_COLORS.gcp }}>Google Cloud Platform</h3>
                 </div>
                 <ul className="text-sm text-muted-foreground space-y-1">
                   <li>Compute Engine, GKE</li>
