@@ -260,14 +260,14 @@ export const NavbarLogo = ({ isScrolled }: { isScrolled: boolean }) => {
     >
       <Image
         src="/profile-pic.png"
-        alt="Hasan Ashab"
+        alt="Agustín Sepúlveda"
         width={32}
         height={32}
         className="rounded-full"
       />
       {!isScrolled && (
-        <span title="Hasan Ashab" className="text-lg font-bold group-hover:text-red-500 transition-colors">
-          Hasan Ashab
+        <span title="Agustín Sepúlveda" className="text-lg font-bold group-hover:text-red-500 transition-colors">
+          Agustín Sepúlveda
         </span>
       )}
     </a>

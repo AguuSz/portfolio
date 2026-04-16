@@ -1,7 +1,7 @@
 {
-  "name": "Hasan Ashab - DevOps & Cloud Engineer Portfolio",
-  "short_name": "Hasan Ashab",
-  "description": "Professional DevOps and Cloud Engineer portfolio showcasing expertise in AWS, Kubernetes, Docker, and CI/CD automation",
+  "name": "Agustín Sepúlveda - DevOps & Infrastructure Engineer Portfolio",
+  "short_name": "Agustín Sepúlveda",
+  "description": "DevOps & Infrastructure Engineer portfolio showcasing expertise in Kubernetes, AWS, GCP, Terraform, and CI/CD automation",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#000000",

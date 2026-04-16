@@ -20,14 +20,18 @@ export class AnalyticsTracker {
   }
 
   private getOrCreateSessionId(): string {
-    if (typeof window === 'undefined') return '';
-    
-    let sessionId = sessionStorage.getItem('analytics_session_id');
-    if (!sessionId) {
-      sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-      sessionStorage.setItem('analytics_session_id', sessionId);
+    if (typeof window === 'undefined' || typeof sessionStorage === 'undefined') return '';
+
+    try {
+      let sessionId = sessionStorage.getItem('analytics_session_id');
+      if (!sessionId) {
+        sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+        sessionStorage.setItem('analytics_session_id', sessionId);
+      }
+      return sessionId;
+    } catch {
+      return '';
     }
-    return sessionId;
   }
 
   async track(eventType: string, elementId?: string, elementText?: string): Promise<void> {

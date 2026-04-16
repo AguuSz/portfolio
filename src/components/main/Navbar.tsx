@@ -13,7 +13,7 @@ import {
 import { ThemeToggle } from '@/hooks/use-toogle'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
-import { FaBlog, FaBriefcase, FaCode, FaEnvelope, FaProjectDiagram, FaUser } from 'react-icons/fa'
+import { FaBriefcase, FaCode, FaEnvelope, FaProjectDiagram, FaUser } from 'react-icons/fa'
 import { Button } from '../ui/button'
 import { TrackableElement, TrackableContact } from '@/components/analytics/TrackableElement'
 import { useAnalyticsContext } from '@/components/analytics/AnalyticsProvider'
@@ -28,7 +28,6 @@ export function Navbar() {
     { name: 'Skills', link: '#skills', icon: <FaCode /> },
     { name: 'Experience', link: '#experience', icon: <FaBriefcase /> },
     { name: 'Projects', link: '#projects', icon: <FaProjectDiagram /> },
-    { name: 'Blogs', link: '#blogs', icon: <FaBlog /> },
   ]
 
   useEffect(() => {

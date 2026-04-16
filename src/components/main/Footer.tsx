@@ -10,12 +10,12 @@ import { TrackableElement, TrackableContact } from '@/components/analytics/Track
 const Footer: FC = () => {
   const socialLinks = [
     {
-      href: 'https://github.com/HasanAshab',
+      href: 'https://github.com/AguuSz',
       icon: <RxGithubLogo className="w-5 h-5" />,
       label: 'GitHub',
     },
     {
-      href: 'https://www.linkedin.com/in/hasan-ashab/',
+      href: 'https://www.linkedin.com/in/agustin-sepulveda',
       icon: <FaLinkedin className="w-5 h-5" />,
       label: 'LinkedIn',
     },
@@ -24,14 +24,14 @@ const Footer: FC = () => {
   const quickLinks = [
     { name: 'About', href: '#about' },
     { name: 'Skills', href: '#skills' },
+    { name: 'Experience', href: '#experience' },
     { name: 'Projects', href: '#projects' },
-    { name: 'Blogs', href: '#blogs' },
+    { name: 'Contact', href: '#contact' },
   ]
 
   const servicesLinks = [
     { name: 'DevOps Engineer', href: '/devops-engineer' },
     { name: 'Cloud Engineer', href: '/cloud-engineer' },
-    { name: 'DevOps Best Practices', href: '/blog/devops-best-practices' },
   ]
 
   const containerVariants = {
@@ -62,10 +62,10 @@ const Footer: FC = () => {
           animate="visible"
         >
           <motion.div className="space-y-4" variants={childVariants}>
-            <h1 title="Hasan Ashab" className="text-2xl font-extrabold bg-clip-text">Hasan Ashab</h1>
+            <h1 title="Agustín Sepúlveda" className="text-2xl font-extrabold bg-clip-text">Agustín Sepúlveda</h1>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              DevOps & Cloud Engineer specializing in AWS, Kubernetes, Docker, and CI/CD automation. 
-              Building scalable infrastructure aligned with company requirements.
+              DevOps & Infrastructure Engineer specializing in Kubernetes, AWS, GCP, and CI/CD automation.
+              Building resilient cloud & on-premise infrastructure.
             </p>
           </motion.div>
 
@@ -133,7 +133,7 @@ const Footer: FC = () => {
             </div>
             <div className="mt-4">
               <p className="text-xs text-muted-foreground">
-                Keywords: DevOps Portfolio, Cloud Engineer, AWS, Kubernetes, Docker, CI/CD
+                Keywords: DevOps Portfolio, Infrastructure Engineer, AWS, GCP, Kubernetes, RKE2, Terraform, CI/CD
               </p>
             </div>
           </motion.div>

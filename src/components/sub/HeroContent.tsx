@@ -95,7 +95,7 @@ const HeroContent: FC = () => {
         <div className="relative">
           <h1 title='name' className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black tracking-tight">
             <span title='name' className="bg-gradient-to-r from-foreground via-primary to-blue-500 bg-clip-text text-transparent">
-              Hasan Ashab
+              Agustín Sepúlveda
             </span>
           </h1>
 
@@ -108,8 +108,8 @@ const HeroContent: FC = () => {
         <div className="relative">
           <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-blue-500/10 to-primary/10 rounded-2xl blur-xl"></div>
           <div className="relative bg-card/40 backdrop-blur-sm border border-primary/20 rounded-2xl p-6 shadow-2xl">
-            <h2 title="DevOps & Cloud Engineer" className="text-2xl sm:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-primary via-blue-500 to-primary bg-clip-text text-transparent mb-3">
-              DevOps & Cloud Engineer
+            <h2 title="DevOps & Infrastructure Engineer" className="text-2xl sm:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-primary via-blue-500 to-primary bg-clip-text text-transparent mb-3">
+              DevOps & Infrastructure Engineer
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-primary to-blue-500 rounded-full mx-auto"></div>
           </div>
@@ -120,7 +120,7 @@ const HeroContent: FC = () => {
           variants={itemVariants}
           className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed"
         >
-          Building scalable infrastructure aligned with company requirements.
+          Building resilient cloud & on-premise infrastructure — from Kubernetes clusters to automated delivery pipelines.
         </motion.p>
       </motion.div>
 
@@ -149,7 +149,7 @@ const HeroContent: FC = () => {
               title="Visit GitHub profile"
               variant="secondary"
               className="group bg-card/60 backdrop-blur-sm border-primary/30 hover:border-primary/60 hover:bg-primary/10 px-6 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg"
-              href="https://github.com/HasanAshab"
+              href="https://github.com/AguuSz"
             >
               <FaGithub className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
             </NavbarButton>
@@ -160,7 +160,7 @@ const HeroContent: FC = () => {
               title="Visit LinkedIn profile"
               variant="secondary"
               className="group bg-card/60 backdrop-blur-sm border-blue-500/30 hover:border-blue-500/60 hover:bg-blue-500/10 px-6 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg"
-              href="https://www.linkedin.com/in/hasan-ashab/"
+              href="https://www.linkedin.com/in/agustin-sepulveda"
             >
               <FaLinkedin  title="Visit LinkedIn profile" className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
             </NavbarButton>

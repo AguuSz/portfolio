@@ -18,30 +18,29 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Hasan Ashab - DevOps & Cloud Engineer Portfolio | AWS, Kubernetes, Docker',
+  title: 'Agustín Sepúlveda - DevOps & Infrastructure Engineer | Kubernetes, AWS, GCP',
   description:
-    'Experienced DevOps and Cloud Engineer specializing in AWS, Kubernetes, Docker, and CI/CD. View my portfolio showcasing cloud infrastructure projects, automation solutions, and scalable deployments.',
+    'DevOps & Infrastructure Engineer specializing in Kubernetes, AWS, GCP, Terraform, and CI/CD. Portfolio showcasing cloud infrastructure, automation, and homelab projects.',
   keywords: [
     'devops portfolio',
-    'cloud engineer portfolio', 
+    'infrastructure engineer',
     'devops engineer',
-    'cloud engineer',
-    'hasan ashab',
-    'hasan ashab portfolio',
-    'portfolio website',
-    'aws devops',
+    'agustin sepulveda',
+    'agustin sepulveda portfolio',
     'kubernetes engineer',
-    'docker specialist',
+    'rke2',
+    'aws',
+    'gcp',
+    'terraform',
     'ci cd pipeline',
     'infrastructure automation',
-    'cloud architecture',
-    'terraform',
-    'ansible',
+    'proxmox',
+    'homelab',
     'jenkins'
   ],
-  authors: [{ name: 'Hasan Ashab' }],
-  creator: 'Hasan Ashab',
-  publisher: 'Hasan Ashab',
+  authors: [{ name: 'Agustín Sepúlveda' }],
+  creator: 'Agustín Sepúlveda',
+  publisher: 'Agustín Sepúlveda',
   robots: {
     index: true,
     follow: true,
@@ -56,31 +55,28 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://hasan-ashab.vercel.app',
-    title: 'Hasan Ashab - DevOps & Cloud Engineer Portfolio',
-    description: 'Experienced DevOps and Cloud Engineer specializing in AWS, Kubernetes, Docker, and CI/CD. View my portfolio showcasing cloud infrastructure projects.',
-    siteName: 'Hasan Ashab Portfolio',
+    url: 'https://asepulveda.dev',
+    title: 'Agustín Sepúlveda - DevOps & Infrastructure Engineer Portfolio',
+    description: 'DevOps & Infrastructure Engineer specializing in Kubernetes, AWS, GCP, and CI/CD automation.',
+    siteName: 'Agustín Sepúlveda Portfolio',
     images: [
       {
         url: '/profile-pic.png',
         width: 1200,
         height: 630,
-        alt: 'Hasan Ashab - DevOps & Cloud Engineer',
+        alt: 'Agustín Sepúlveda - DevOps & Infrastructure Engineer',
       },
     ],
   },
   // twitter: {
   //   card: 'summary_large_image',
-  //   title: 'Hasan Ashab - DevOps & Cloud Engineer Portfolio',
-  //   description: 'Experienced DevOps and Cloud Engineer specializing in AWS, Kubernetes, Docker, and CI/CD.',
+  //   title: 'Agustín Sepúlveda - DevOps & Infrastructure Engineer Portfolio',
+  //   description: 'DevOps & Infrastructure Engineer specializing in Kubernetes, AWS, GCP, and CI/CD.',
   //   images: ['/profile-pic.png'],
-  //   creator: '@hasanashab',
+  //   creator: '@agustinsepulveda',
   // },
   alternates: {
-    canonical: 'https://hasan-ashab.vercel.app',
-  },
-  verification: {
-    google: 'wUvigUYIHyBvrQMmeBFTg5ixr4HDAdPcPPlyPJSzmc0',
+    canonical: 'https://asepulveda.dev',
   },
 }
 
@@ -92,32 +88,35 @@ export default function RootLayout({
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Person',
-    name: 'Hasan Ashab',
-    jobTitle: 'DevOps & Cloud Engineer',
-    description: 'Experienced DevOps and Cloud Engineer specializing in AWS, Kubernetes, Docker, and CI/CD automation',
-    url: 'https://hasan-ashab.vercel.app',
-    image: 'https://hasan-ashab.vercel.app/profile-pic.jpg',
+    name: 'Agustín Sepúlveda',
+    jobTitle: 'DevOps & Infrastructure Engineer',
+    description: 'DevOps & Infrastructure Engineer specializing in Kubernetes, AWS, GCP, Terraform, and CI/CD automation',
+    url: 'https://asepulveda.dev',
+    image: 'https://asepulveda.dev/profile-pic.png',
     sameAs: [
-      'https://github.com/HasanAshab',
-      'https://linkedin.com/in/hasan-ashab',
+      'https://github.com/AguuSz',
+      'https://linkedin.com/in/agustin-sepulveda',
     ],
     knowsAbout: [
       'DevOps',
-      'Cloud Engineering', 
+      'Infrastructure Engineering',
       'AWS',
+      'GCP',
       'Kubernetes',
+      'RKE2',
       'Docker',
       'CI/CD',
       'Infrastructure as Code',
       'Terraform',
       'Ansible',
+      'Proxmox',
       'Jenkins',
       'Monitoring',
       'Automation'
     ],
     worksFor: {
       '@type': 'Organization',
-      name: 'Elevate Labs'
+      name: 'Iquall Networks'
     }
   }
 
@@ -128,7 +127,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        <link rel="canonical" href="https://hasan-ashab.vercel.app" />
+        <link rel="canonical" href="https://asepulveda.dev" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#3b82f6" media="(prefers-color-scheme: light)" />
         <meta name="theme-color" content="#1e40af" media="(prefers-color-scheme: dark)" />

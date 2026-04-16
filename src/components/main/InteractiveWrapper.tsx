@@ -123,15 +123,18 @@ export default function InteractiveWrapper({ children }: Props) {
   }
 
 
-  setInterval(() => {
-    const newTitles = getDifference(titlesRef.current, oldTitlesRef.current);
-    if (newTitles.length > 0) {      
-      pushHoverAnalyticsData(newTitles);
-      newTitles.forEach(title => {
-        oldTitlesRef.current.add(title);
-      });
-    }
-  }, 5000);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const newTitles = getDifference(titlesRef.current, oldTitlesRef.current);
+      if (newTitles.length > 0) {
+        pushHoverAnalyticsData(newTitles);
+        newTitles.forEach(title => {
+          oldTitlesRef.current.add(title);
+        });
+      }
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className="flex flex-col gap-10" onMouseMove={handleMouseMove} onClick={updateClickAnalyticsData}>
