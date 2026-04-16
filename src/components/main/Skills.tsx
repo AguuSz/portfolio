@@ -9,7 +9,7 @@ const uniqueSkills: Skill[] = Array.from(
   skills
     .reduce((map, skill) => {
       if (!map.has(skill.skill_name)) {
-        map.set(skill.skill_name, { ...skill, width: 40, height: 40 })
+        map.set(skill.skill_name, skill)
       }
       return map
     }, new Map<string, Skill>())
@@ -114,9 +114,8 @@ const Skills = () => {
               
               <div className="relative flex flex-col items-center gap-3 z-10">
                 <SkillDataProvider
-                  src={skill.Image}
-                  width={32}
-                  height={32}
+                  skill={skill}
+                  size={40}
                   index={index}
                   className="group-hover:scale-110 transition-transform duration-300"
                 />

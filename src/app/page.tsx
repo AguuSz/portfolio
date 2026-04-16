@@ -1,7 +1,7 @@
 import ContactUs from "@/components/main/ContactUs";
+import Education from "@/components/main/Education";
 import Hero from "@/components/main/Hero";
 import Projects from "@/components/main/Projects";
-import ResumeSection from "@/components/main/Resume";
 import Skills from "@/components/main/Skills";
 import Timeline from "@/components/main/Timeline";
 import { Toaster } from "react-hot-toast";
@@ -33,8 +33,8 @@ export default function Home() {
 			<InteractiveWrapper>
 				<Hero />
 				<Skills />
-				<ResumeSection />
 				<Timeline />
+				<Education />
 				<Projects />
 				<ContactUs />
 				<Toaster position="bottom-right" />
