@@ -1,6 +1,12 @@
 import { Resend } from 'resend'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
+let resend: Resend
+function getResend() {
+  if (!resend) {
+    resend = new Resend(process.env.RESEND_API_KEY)
+  }
+  return resend
+}
 
 interface FormData {
   name: string
@@ -51,7 +57,7 @@ export async function POST(req: Request) {
   const sanitizedMessage = message.replace(/[<>]/g, '')
 
   try {
-    const { error } = await resend.emails.send({
+    const { error } = await getResend().emails.send({
       from: `onboarding@resend.dev`,
       to: ['agustinnsepulveda@gmail.com'],
       replyTo: email,

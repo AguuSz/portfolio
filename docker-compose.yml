@@ -1,0 +1,15 @@
+services:
+  portfolio:
+    build: .
+    ports:
+      - "3025:3025"
+    environment:
+      - RESEND_API_KEY=${RESEND_API_KEY}
+      - PORT=3025
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--spider", "-q", "http://localhost:3025"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 15s
