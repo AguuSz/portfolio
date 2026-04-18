@@ -21,6 +21,7 @@ import {
   SiTailscale,
   SiTerraform,
   SiVmware,
+  SiApple,
 } from 'react-icons/si'
 
 export interface Skill {
@@ -34,32 +35,34 @@ export interface Skill {
 }
 
 export const skills: Skill[] = [
+  // Cloud
+  { skill_name: 'AWS', image: '/aws.jpeg' },
+  { skill_name: 'GCP', icon: SiGooglecloud, color: '#4285F4' },
+  { skill_name: 'Oracle Cloud', image: '/oracle.png' },
+
   // Orquestación & Containers
   { skill_name: 'Kubernetes', icon: SiKubernetes, color: '#326CE5' },
   { skill_name: 'RKE2', image: '/rke2.png' },
-  { skill_name: 'Rancher', icon: SiRancher, color: '#0075A8' },
   { skill_name: 'Docker', icon: SiDocker, color: '#2496ED' },
-  { skill_name: 'Helm', icon: SiHelm, color: '#0F1689' },
-
-  // Cloud
-  { skill_name: 'AWS', image: '/aws.png' },
-  { skill_name: 'GCP', icon: SiGooglecloud, color: '#4285F4' },
-
+  
   // IaC & Automatización
   { skill_name: 'Terraform', icon: SiTerraform, color: '#844FBA' },
-  { skill_name: 'Packer', icon: SiPacker, color: '#02A8EF' },
   { skill_name: 'Ansible', icon: SiAnsible, color: '#EE0000' },
-
+  
   // CI/CD
   { skill_name: 'Jenkins', icon: SiJenkins, color: '#D24939' },
-
+  { skill_name: 'Git', icon: SiGit, color: '#F05032' },
+  { skill_name: 'Helm', icon: SiHelm, color: '#0F1689' },
+  
   // Virtualización
   { skill_name: 'Proxmox', icon: SiProxmox, color: '#E57000' },
   { skill_name: 'VMware ESXi', icon: SiVmware, color: '#607078' },
-
+  
   // Monitoreo & Observabilidad
   { skill_name: 'Prometheus', icon: SiPrometheus, color: '#E6522C' },
   { skill_name: 'OpenObserve', image: '/openobserve.png' },
+  { skill_name: 'Grafana', image: '/grafana.png' },
+  { skill_name: 'Rancher', icon: SiRancher, color: '#0075A8' },
 
   // Networking & Security
   { skill_name: 'Caddy', icon: SiCaddy, color: '#1F88C0' },
@@ -75,11 +78,12 @@ export const skills: Skill[] = [
 
   // OS & Sistemas
   { skill_name: 'Linux', icon: SiLinux, color: '#FCC624' },
+  { skill_name: 'macOS', icon: SiApple, color: '#FFFFFF' },
+  { skill_name: 'Windows', image: '/windows.svg' },
 
   // Desarrollo
   { skill_name: 'Python', icon: SiPython, color: '#3776AB' },
-  { skill_name: 'Spring Boot', icon: SiSpringboot, color: '#6DB33F' },
-  { skill_name: 'Git', icon: SiGit, color: '#F05032' },
+
 ]
 
 export const Socials = [

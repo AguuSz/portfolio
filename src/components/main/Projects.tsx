@@ -15,7 +15,7 @@ const projectsData = [
 
 const Projects = () => {
   return (
-    <section id="projects" className="relative py-20 overflow-hidden">
+    <section id="projects" className="relative pb-20 overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-32 left-16 w-28 h-28 bg-primary/10 rounded-full blur-xl animate-pulse"></div>

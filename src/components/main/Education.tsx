@@ -19,6 +19,7 @@ interface CertificationItem {
 	description: string;
 	highlight?: string;
 	isAward?: boolean;
+	isOngoing?: boolean;
 }
 
 const educationData: EducationItem[] = [
@@ -41,6 +42,13 @@ const certificationsData: CertificationItem[] = [
 			"Cloud security Capture The Flag focused on infrastructure exploitation and vulnerabilities in cloud-native environments. In this CTF, participants worked with AWS, GCP, and Azure.",
 		highlight: "🏆 3rd Place",
 		isAward: true,
+	},
+	{
+		title: "AWS Certified CloudOps Engineer – Associate",
+		issuer: "Amazon Web Services",
+		description:
+			"Cloud operations certification covering monitoring, logging, remediation, security, networking, and cost optimization on AWS.",
+		isOngoing: true,
 	},
 	{
 		title: "Introduction to Cybersecurity",
@@ -156,6 +164,11 @@ const Education: FC = () => {
 								viewport={{ once: true }}
 								transition={{ duration: 0.5, delay: i * 0.1 }}
 								className="relative bg-card/60 backdrop-blur-sm border border-primary/20 rounded-2xl p-6 shadow-lg hover:shadow-xl hover:border-primary/40 transition-all duration-300">
+								{cert.isOngoing && (
+									<span className="absolute -top-3 right-4 text-xs font-semibold bg-gradient-to-r from-amber-500 to-yellow-400 text-black px-3 py-1 rounded-full shadow">
+										On-going
+									</span>
+								)}
 								{cert.highlight && (
 									<span className="absolute -top-3 right-4 text-xs font-semibold bg-gradient-to-r from-primary to-accent-2 text-primary-foreground px-3 py-1 rounded-full shadow">
 										{cert.highlight}

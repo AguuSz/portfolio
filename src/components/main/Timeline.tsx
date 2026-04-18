@@ -137,7 +137,7 @@ const Timeline: FC = () => {
 	return (
 		<section
 			id="experience"
-			className="relative py-20 text-foreground transition-colors overflow-hidden">
+			className="relative py-10 text-foreground transition-colors overflow-hidden">
 			{/* Animated Background Elements */}
 			<div className="absolute inset-0 -z-10">
 				{/* Floating Geometric Shapes */}
@@ -160,7 +160,7 @@ const Timeline: FC = () => {
 					whileInView={{ opacity: 1, y: 0 }}
 					viewport={{ once: true }}
 					transition={{ duration: 0.8 }}
-					className="text-center mb-16">
+					className="text-center">
 					<h1
 						title="Professional Experience & Projects"
 						className="text-4xl sm:text-5xl font-bold tracking-tight text-heading-gradient mb-4">
