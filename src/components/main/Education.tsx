@@ -69,7 +69,7 @@ const Education: FC = () => {
 	return (
 		<section
 			id="education"
-			className="relative py-20 text-foreground transition-colors overflow-hidden">
+			className="relative py-10 text-foreground transition-colors overflow-hidden">
 			{/* Animated Background Elements */}
 			<div className="absolute inset-0 -z-10">
 				<div className="absolute top-20 left-10 w-32 h-32 bg-primary/10 rounded-full blur-xl animate-pulse"></div>
@@ -101,7 +101,7 @@ const Education: FC = () => {
 				</motion.div>
 
 				{/* Education subsection */}
-				<div className="max-w-5xl mx-auto mb-16">
+				<div className="max-w-6xl mx-auto mb-16">
 					<motion.h2
 						initial={{ opacity: 0, x: -20 }}
 						whileInView={{ opacity: 1, x: 0 }}
@@ -144,7 +144,7 @@ const Education: FC = () => {
 				</div>
 
 				{/* Certifications subsection */}
-				<div className="max-w-5xl mx-auto">
+				<div className="max-w-6xl mx-auto">
 					<motion.h2
 						initial={{ opacity: 0, x: -20 }}
 						whileInView={{ opacity: 1, x: 0 }}

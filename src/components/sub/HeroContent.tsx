@@ -88,7 +88,7 @@ const HeroContent: FC = () => {
 						title="name"
 						className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black tracking-tight">
 						<span title="name" className="text-heading-gradient">
-							Agustín Sepúlveda
+							Agustin Sepulveda
 						</span>
 					</h1>
 

@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://asepulveda.dev'),
-  title: 'Agustín Sepúlveda - DevOps & Infrastructure Engineer | Kubernetes, AWS, GCP',
+  title: 'Agustin Sepulveda - DevOps & Infrastructure Engineer | Kubernetes, AWS, GCP',
   description:
     'DevOps & Infrastructure Engineer specializing in Kubernetes, AWS, GCP, Terraform, and CI/CD. Portfolio showcasing cloud infrastructure, automation, and homelab projects.',
   keywords: [
@@ -37,9 +37,9 @@ export const metadata: Metadata = {
     'homelab',
     'jenkins'
   ],
-  authors: [{ name: 'Agustín Sepúlveda' }],
-  creator: 'Agustín Sepúlveda',
-  publisher: 'Agustín Sepúlveda',
+  authors: [{ name: 'Agustin Sepulveda' }],
+  creator: 'Agustin Sepulveda',
+  publisher: 'Agustin Sepulveda',
   robots: {
     index: true,
     follow: true,
@@ -55,21 +55,21 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://asepulveda.dev',
-    title: 'Agustín Sepúlveda - DevOps & Infrastructure Engineer Portfolio',
+    title: 'Agustin Sepulveda - DevOps & Infrastructure Engineer Portfolio',
     description: 'DevOps & Infrastructure Engineer specializing in Kubernetes, AWS, GCP, and CI/CD automation.',
-    siteName: 'Agustín Sepúlveda Portfolio',
+    siteName: 'Agustin Sepulveda Portfolio',
     images: [
       {
         url: '/profile-pic.png',
         width: 1200,
         height: 630,
-        alt: 'Agustín Sepúlveda - DevOps & Infrastructure Engineer',
+        alt: 'Agustin Sepulveda - DevOps & Infrastructure Engineer',
       },
     ],
   },
   // twitter: {
   //   card: 'summary_large_image',
-  //   title: 'Agustín Sepúlveda - DevOps & Infrastructure Engineer Portfolio',
+  //   title: 'Agustin Sepulveda - DevOps & Infrastructure Engineer Portfolio',
   //   description: 'DevOps & Infrastructure Engineer specializing in Kubernetes, AWS, GCP, and CI/CD.',
   //   images: ['/profile-pic.png'],
   //   creator: '@agustinsepulveda',
@@ -87,7 +87,7 @@ export default function RootLayout({
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Person',
-    name: 'Agustín Sepúlveda',
+    name: 'Agustin Sepulveda',
     jobTitle: 'DevOps & Infrastructure Engineer',
     description: 'DevOps & Infrastructure Engineer specializing in Kubernetes, AWS, GCP, Terraform, and CI/CD automation',
     url: 'https://asepulveda.dev',

@@ -235,21 +235,25 @@ export const MobileNavToggle = ({
 export const NavbarLogo = ({ isScrolled }: { isScrolled: boolean }) => {
   return (
     <a
-      title="Navigate to About section"
-      href="#about"
-      className="group flex items-center space-x-3"
-      aria-label="Navigate to About section"
+      title="Back to top"
+      href="#"
+      onClick={(e) => {
+        e.preventDefault()
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+      }}
+      className="relative z-30 group flex items-center space-x-3 cursor-pointer"
+      aria-label="Back to top"
     >
       <Image
         src="https://avatars.githubusercontent.com/u/36462331?v=4"
-        alt="Agustín Sepúlveda"
+        alt="Agustin Sepulveda"
         width={32}
         height={32}
         className="rounded-full"
       />
       {!isScrolled && (
-        <span title="Agustín Sepúlveda" className="text-lg font-bold group-hover:text-destructive transition-colors">
-          Agustín Sepúlveda
+        <span title="Agustin Sepulveda" className="text-lg font-bold group-hover:text-destructive transition-colors">
+          Agustin Sepulveda
         </span>
       )}
     </a>

@@ -49,7 +49,7 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="relative flex flex-col items-center justify-center gap-12 py-20 px-4 sm:px-8 min-h-[600px] overflow-hidden"
+      className="relative flex flex-col items-center justify-center gap-12 py-10 px-4 sm:px-8 min-h-[600px] overflow-hidden"
       aria-labelledby="skills-heading"
     >
       {/* Animated Background Elements */}

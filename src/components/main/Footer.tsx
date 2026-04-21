@@ -19,20 +19,6 @@ const Footer: FC = () => {
     },
   ]
 
-  const quickLinks = [
-    { name: 'About', href: '#about' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Experience', href: '#experience' },
-    { name: 'Education', href: '#education' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Contact', href: '#contact' },
-  ]
-
-  const servicesLinks = [
-    { name: 'DevOps Engineer', href: '/devops-engineer' },
-    { name: 'Cloud Engineer', href: '/cloud-engineer' },
-  ]
-
   const containerVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -55,55 +41,17 @@ const Footer: FC = () => {
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-accent-3 via-accent-2 to-accent-4" />
       <div className="max-w-7xl mx-auto">
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"
+          className="grid grid-cols-1 sm:grid-cols-2 gap-8"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
         >
           <motion.div className="space-y-4" variants={childVariants}>
-            <h1 title="Agustín Sepúlveda" className="text-2xl font-extrabold bg-clip-text">Agustín Sepúlveda</h1>
+            <h1 title="Agustin Sepulveda" className="text-2xl font-extrabold bg-clip-text">Agustin Sepulveda</h1>
             <p className="text-sm text-muted-foreground leading-relaxed">
               DevOps & Infrastructure Engineer specializing in Kubernetes, AWS, GCP, and CI/CD automation.
               Building resilient cloud & on-premise infrastructure.
             </p>
-          </motion.div>
-
-          <motion.div className="space-y-4" variants={childVariants}>
-            <h2 title="Quick Links" className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">
-              Quick Links
-            </h2>
-            <ul className="space-y-2 text-sm">
-              {quickLinks.map((item) => (
-                <li key={item.name}>
-                  <a
-                    href={item.href}
-                    className="hover:text-primary transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary"
-                    aria-label={`Navigate to ${item.name} section`}
-                  >
-                    {item.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </motion.div>
-
-          <motion.div className="space-y-4" variants={childVariants}>
-            <h2 title="Services" className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">
-              Services
-            </h2>
-            <ul className="space-y-2 text-sm">
-              {servicesLinks.map((item) => (
-                <li key={item.name}>
-                  <a
-                    href={item.href}
-                    className="hover:text-primary transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-primary"
-                    aria-label={`Learn about ${item.name}`}
-                  >
-                    {item.name}
-                  </a>
-                </li>
-              ))}
-            </ul>
           </motion.div>
 
           <motion.div className="space-y-4" variants={childVariants}>
