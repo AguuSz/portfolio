@@ -252,7 +252,7 @@ export const NavbarLogo = ({ isScrolled }: { isScrolled: boolean }) => {
         className="rounded-full"
       />
       {!isScrolled && (
-        <span title="Agustin Sepulveda" className="text-lg font-bold group-hover:text-destructive transition-colors">
+        <span title="Agustin Sepulveda" className="text-lg font-bold group-hover:text-primary transition-colors">
           Agustin Sepulveda
         </span>
       )}
