@@ -32,7 +32,8 @@ export const timelineData: TimelineItem[] = [
 		description:
 			"Multi-cloud infrastructure engineering across AWS and GCP with focus on automation and reliability.",
 		achievements: [
-			"Architecting and managing multi-cloud infrastructure (AWS/GCP)",
+      "Architecting and managing multi-cloud infrastructure (AWS/GCP)",
+      "L3 infrastructure engineering and troubleshooting: OS-level diagnostics, disk/network failure recovery, and root cause analysis on Kubernetes clusters (RKE2/EKS).",
 			"Automating OVA delivery pipelines for product distribution",
 			"Leading ESXi to Proxmox migration for on-premise environments",
 			"Managing Kubernetes clusters (RKE2) with Rancher",
