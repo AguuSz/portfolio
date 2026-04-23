@@ -18,9 +18,6 @@
 - **Styling**: Tailwind CSS 4.0
 - **UI**: Radix UI, ShadCN UI
 - **Animations**: Framer Motion
-- **Email**: Resend
-- **Analytics**: Supabase + Vercel Analytics
-- **Deployment**: Vercel (Cloudflare Pages support)
 
 ## Getting Started
 
