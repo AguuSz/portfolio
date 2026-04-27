@@ -35,7 +35,7 @@ const educationData: EducationItem[] = [
 
 const certificationsData: CertificationItem[] = [
 	{
-		title: "Hack The Cloud 25 — CTF",
+		title: "Hack The Cloud 25 — Ekoparty Buenos Aires 2025",
 		issuer: "Spartan-Cybersecurity",
 		date: "Nov 2025",
 		description:

@@ -4,7 +4,18 @@ import { motion } from "motion/react";
 import { FC, JSX } from "react";
 import Image from "next/image";
 import { Timeline as TimelineComponent } from "@/components/ui/timeline";
-import { FaBook, FaCode, FaLaptopCode } from "react-icons/fa";
+import { FaCode, FaLaptopCode } from "react-icons/fa";
+import { SiProxmox } from "react-icons/si";
+
+const homelabBullets = [
+	"Mesh VPN architecture with Tailscale connecting Proxmox nodes, a remote Raspberry Pi, and personal devices.",
+	"Service exposure layer with Cloudflare Tunnels, Zero Trust policies, and Nginx Proxy Manager — automated TLS via Let's Encrypt.",
+	"Cloudflare infrastructure as code with Terraform: DNS records, Tunnels, and Zero Trust policies versioned in Git as a dedicated submodule.",
+	"Lightweight monitoring with Beszel agents tracking CPU/RAM/disk across nodes, with Discord alerting for anomalies.",
+	"Container update automation with dockcheck: weekly cron, Discord notifications.",
+	"Network-wide adblock and DNS filtering with Pi-hole, remotely accessible through Tailscale.",
+	"Self-hosted media automation stack (Jellyfin, *arr suite, Jellyseerr) with NFS-backed storage.",
+];
 
 export interface TimelineItem {
 	id: number;
@@ -24,7 +35,7 @@ export const timelineData: TimelineItem[] = [
 	{
 		id: 1,
 		type: "work",
-		title: "DevOps Engineer",
+		title: "Infrastructure & DevOps Engineer",
 		company: "Iquall Networks",
 		location: "Remote — Córdoba, Argentina",
 		imageURL: "/iquall.png",
@@ -32,11 +43,12 @@ export const timelineData: TimelineItem[] = [
 		description:
 			"Multi-cloud infrastructure engineering across AWS and GCP with focus on automation and reliability.",
 		achievements: [
-      "Architecting and managing multi-cloud infrastructure (AWS/GCP)",
-      "L3 infrastructure engineering and troubleshooting: OS-level diagnostics, disk/network failure recovery, and root cause analysis on Kubernetes clusters (RKE2/EKS).",
+			"Architecting and managing multi-cloud infrastructure (AWS/GCP)",
+			"L3 infrastructure engineering and troubleshooting: OS-level diagnostics, disk/network failure recovery, and root cause analysis on Kubernetes clusters (RKE2/EKS).",
 			"Automating OVA delivery pipelines for product distribution",
 			"Leading ESXi to Proxmox migration for on-premise environments",
-			"Managing Kubernetes clusters (RKE2) with Rancher",
+			"Managing Proxmox-based infrastructure",
+			"Operating multi-master RKE2 clusters with Rancher: HA configuration, Longhorn storage management, and node recovery procedures",
 			"Building proactive monitoring stack with Prometheus & OpenObserve",
 			"Deploying internal knowledge wiki for team documentation",
 		],
@@ -163,9 +175,9 @@ const Timeline: FC = () => {
 					transition={{ duration: 0.8 }}
 					className="text-center">
 					<h1
-						title="Professional Experience & Projects"
+						title="Professional Experience"
 						className="text-4xl sm:text-5xl font-bold tracking-tight text-heading-gradient mb-4">
-						Professional Experience & Projects
+						Professional Experience
 					</h1>
 					<p className="text-lg text-muted-foreground max-w-2xl mx-auto">
 						Highlights of my career and key projects showcasing my skills &
@@ -180,6 +192,63 @@ const Timeline: FC = () => {
 					transition={{ duration: 0.6, delay: 0.2 }}
 					className="relative w-full">
 					<TimelineComponent data={timelineContent} />
+				</motion.div>
+
+				<motion.div
+					initial={{ opacity: 0, y: 20 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					viewport={{ once: true }}
+					transition={{ duration: 0.6, delay: 0.2 }}
+					className="relative max-w-7xl mx-auto mt-16 md:px-10">
+					<div className="text-center mb-6">
+						<span className="text-xs uppercase tracking-[0.3em] text-muted-foreground">
+							— Honorable Mention —
+						</span>
+					</div>
+					<div className="rounded-xl border border-border/50 bg-card/80 backdrop-blur-sm glass-effect p-6 sm:p-8">
+						<div className="flex items-center gap-4 mb-6">
+							<div className="flex items-center justify-center w-[68px] h-[68px] rounded-md shadow bg-muted p-1">
+								<SiProxmox className="w-10 h-10 text-[#E57000]" />
+							</div>
+							<div>
+								<h3
+									title="Personal Homelab"
+									className="text-lg font-semibold text-foreground">
+									Personal Homelab
+								</h3>
+								<p className="text-sm text-muted-foreground">
+									Self-hosted • Córdoba, Argentina
+								</p>
+								<p className="text-sm text-muted-foreground">Ongoing</p>
+							</div>
+						</div>
+
+						<div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-start">
+							<div className="space-y-6">
+								<p className="text-sm text-muted-foreground">
+									Self-managed infrastructure running production-grade tooling
+									on consumer hardware — Proxmox cluster with mesh VPN,
+									IaC-managed edge, observability and self-hosted services.
+								</p>
+
+								<ul className="list-disc pl-5 space-y-1 text-sm text-foreground">
+									{homelabBullets.map((b) => (
+										<li key={b}>{b}</li>
+									))}
+								</ul>
+							</div>
+
+							<div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden border border-border/50 bg-background/50">
+								<Image
+									src="/homelab-architecture.png"
+									alt="Personal Homelab Architecture"
+									fill
+									sizes="(max-width: 768px) 100vw, 50vw"
+									className="object-contain"
+								/>
+							</div>
+						</div>
+					</div>
 				</motion.div>
 			</div>
 		</section>
